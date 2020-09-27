@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+}
+body{
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    font-family: "sofiapro-medium",PingFangSC,sans-serif;
+}
+.container{
+
+    margin: 0;
+    padding: 0 !important;
+    box-sizing: border-box;
+    width:100% !important;
+    max-width: 100% !important;
+}
+
+
+#dropdown{position: relative;padding: 0;margin: auto;width: 10%;cursor: pointer;text-align: center;display: inline-table;}
+#dropdown button{width: 100%;margin:auto;
+    border: none;
+    background: none;}
+#dropdown i{
+    font-size: 24px;}
+#dropdown a{background-color: #2e2e2e;color: #fff;padding: 5px;font-size: 13px;border-radius: 5px;cursor:pointer;}
+#dropdown-content {display: none;position: absolute;background-color: #ccc;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;width: 80px;right: 10%;margin: 0px auto;border: 1px solid #ccc;border-bottom: none;border-top: none;}
+#dropdown-content a {color: #2e2e2e;text-decoration: none;display: block;border-radius: 0;font-size: 13px;text-align: center;
+  padding: 5px;background-color: #fff;transition: 0.3s all;border: 1px solid #ccc;border-right: 0;border-left: 0;}
+#dropdown-content a:hover {color: #000;background-color: #ccc;border-color: #000;}
+#dropdown:hover #dropdown-content {display: block;}
+#dropdown:hover .dropbtn {background-color: #fff;border-radius:0px;}
+#dropdown-cont{right: 0%;top: 85%;width: auto;}
+
+@media(min-width: 768px){
+    
+}
+@media(min-width: 1024px){
+	.container{width: 65%;}
+}

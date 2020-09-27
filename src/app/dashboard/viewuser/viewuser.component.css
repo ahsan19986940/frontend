@@ -1,0 +1,104 @@
+.mainDivHeading{display: flex;padding: 10px;background-color: #b90103;color: #fcfcfc;width:100%;}
+.mainDivHeading h3{    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;}
+.mainDivHeading button{color: #fff;font-size: 20px;display: contents;}
+
+.mainDiv{
+    text-align: center;
+}
+.viewUserImg{
+    width: 70%;
+    margin: 5px auto;
+}
+.viewUserImg img{    
+    width: 45%;
+    height: 50%;
+    border: 1px solid #b90103;
+    border-radius: 70px;
+}
+
+.viewUserData{
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+}
+.viewUserContent{
+    font-size: 13px;width: 100%;
+}
+.viewUserContent h4{
+    border-bottom: 1px solid #2e2e2e;
+    color: #000;
+    font-weight: 600;    
+    font-size: 12px;
+    margin: 5px auto;
+    padding: 3px;
+}
+.viewUserContent table{
+    width: 100%;
+}
+.viewUserContent tr{
+    border-bottom: 1px solid #000;
+}
+.viewUserContent th{
+    width: 30%;
+    margin: auto;
+}
+.viewUserContent td{
+    
+    width: 70%;
+}
+@media(min-width: 768px){
+    .viewUserImg img{        width: 30%;
+        height: 50%;
+    }
+    .viewUserImg{
+        margin: 10px auto;
+    }
+    .viewUserContent h4{
+        font-size: 16px;
+        margin: 5px auto;
+        padding: 5px;
+    }
+   .viewUserContent{
+    font-size: 18px;
+    width: 100%;}
+    .mainDiv h3{
+        font-size: 17px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+    .mainDivHeading{padding: 20px;}
+    .mainDivHeading h3{font-size: 22px;}
+    .mainDivHeading button{font-size: 25px;}
+}
+@media(min-width: 1024px){
+    .viewUserImg img{        width: 30%;
+        height: 50%;
+    }
+    .viewUserImg{
+        margin: 15px auto;
+    }
+    .viewUserContent h4{
+        font-size: 18px;
+        margin: 10px auto;
+        padding: 5px;
+    }
+    .mainDiv h3{
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+    .viewUserContent{
+        font-size: 20px;
+        width: 100%;}
+    .mainDivHeading{padding: 20px;}
+    .mainDivHeading h3{font-size: 25px;}
+    .mainDivHeading button{font-size: 30px;}
+}

@@ -1,0 +1,43 @@
+<div class="dashboardMain">
+    <h3>Category</h3>
+    <div class="jobTicket">
+        <div class="jobTicketCont">
+            <a (click)="insertCategoryModal()">Insert New Category</a>
+        </div>
+        <div class="dashboardUserDiv">
+
+            <table datatable *ngIf="length > 0" [dtOptions]="dtOptions" id="dashboardTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Category Title</th>
+                        <td>Created On</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of categoryList; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{l.title}}</td>
+                        <td>{{l.createdOn | date : 'dd-MM-yyyy'}} - {{l.createdOn | date : 'h:mm a'}}</td>
+                        <td>
+                            <div id="dropdown">
+                                <button class="dropbtn" href="">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div id="dropdown-content">
+                                    <div id="dropdown-cont">
+                                        <a (click)="removeCategory(l.id, l.title)">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="noLedgerDiv" *ngIf="length <= 0">
+                <h2>No Category Found</h2>
+            </div>
+        </div>
+    </div>
+</div>

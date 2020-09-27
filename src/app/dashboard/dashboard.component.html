@@ -1,0 +1,52 @@
+<header>
+    <div class="headLogoDiv">
+        <h1 class="mainLogo">Werkz Engineering</h1>
+        <a (click)='showSideNav()' class="sideNavButton">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+    <div class="headLogoSide">
+        <a (click)='changepassword()'>Change Password</a>
+        <a (click)= 'logout()'>Logout</a>
+    </div>
+</header>
+<section>
+    <div *ngIf='showNav' class="dashbaordSideBar">
+        <div class="dashboarduserImg">
+            <h2>User Image</h2>
+            <h3>{{fullname}}</h3>
+        </div>
+        <div class="dashboardSideNav">
+            <ul>
+                <li [routerLink]="['index']">
+                    <i class="fas fa-tv"></i>
+                    <p>Dashboard</p>
+                </li>
+                <li *ngIf='role === "Admin"' [routerLink]="['jobTicket']">
+                    <i class="fas fa-ticket-alt"></i>
+                    <p>Job Tickets</p>
+                </li>
+                <li *ngIf='role === "Worker"' [routerLink]="['workerJobTicket']">
+                    <i class="fas fa-ticket-alt"></i>
+                    <p>Job Tickets</p>
+                </li>
+                <li [routerLink]="['routineChecklist']">
+                    <i class="fas fa-tasks"></i>
+                    <p>Routine Checklist</p>
+                </li>
+                <li *ngIf='role === "Admin"' [routerLink]="['manageUser']">
+                    <i class="fas fa-users"></i>
+                    <p>Manage Users</p>
+                </li>
+                <li *ngIf='role === "Admin"' [routerLink]="['category']">
+                    <i class="fas fa-type"></i>
+                    <p>Manage Category</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dashboardMainCont">
+        <router-outlet></router-outlet>
+
+    </div>
+</section>

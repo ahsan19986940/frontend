@@ -1,0 +1,55 @@
+<div>
+    <div class="mainDivHeading">
+        <div class="mainDivSubHead" style='width:100%;'>
+            <h3>User Info</h3>
+        </div>
+        <button style="color: #fff;" type="button" class="close pull-right" aria-label="Close"
+            (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <section>
+        <div class="mainDiv" *ngIf="user">
+            <div class="viewUserImg">
+                <img src='../../../assets/user.png' />
+            </div>
+            <div class="viewUserData">
+                <div class="viewUserContent">
+                    <table>
+                        <tr>
+                            <th>Fullname</th>
+                            <td>{{user.fullname}}</td>
+                        </tr>
+                        <tr>
+                            <th>Username</th>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <th>Password</th>
+                            <td>{{user.password}}</td>
+                        </tr>
+                        <tr>
+                            <th>Role</th>
+                            <td>{{user.role}}</td>
+                        </tr>
+                        <tr>
+                            <th>Last Login</th>
+                            <td *ngIf="user.lastLogin !== 'none'">{{user.lastLogin | date : 'dd-MM-yyyy'}} - {{user.lastLogin | date : 'h:mm a'}}</td>
+                            <td *ngIf="user.lastLogin === 'none'">None</td>
+                        </tr>
+                        <tr>
+                            <th>Created On</th>
+                            <td *ngIf="user.createdOn !== 'none'">{{user.createdOn | date : 'dd-MM-yyyy'}} - {{user.createdOn | date : 'h:mm a'}}</td>
+                            <td *ngIf="user.createdOn === 'none'">None</td>
+                        </tr>
+                        <tr>
+                            <th>Location</th>
+                            <td>{{user.location}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>

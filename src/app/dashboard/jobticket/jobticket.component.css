@@ -1,0 +1,162 @@
+.dashboardMain{ 
+    margin: 10px auto;
+    width: 100%;}
+.dashboardMain h3{
+    font-size: 18px;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #b90103;
+    color: #fff;
+}
+.jobTicket{
+    background-color: #fff;
+    border: 1px solid #999;
+    border-top: none;
+    padding: 5px;
+}
+.jobTicketCont{
+    margin: 10px auto;
+}
+.jobTicketCont a{
+padding: 5px;
+font-size: 13px;
+width: 60%;
+background-color: #2e2e2e;
+color: #fff;
+border: 1px solid #fff;
+font-weight: 600;
+display: block;
+text-align: center;margin: 0 auto;
+cursor: pointer;
+transition:0.5s all;
+}
+.jobTicketCont a:hover{
+    background: #fafafa;
+    color: #b90103;
+    border-color: #b90103;
+    border-radius: 5px;
+}
+
+.dashboardUserDiv{
+    
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+th{
+    font-weight: bolder;
+}
+td{ cursor:pointer;}
+.dataTables_wrapper{
+    width: 100% !important;
+    font-size: 10px !important;
+}
+table.dataTable.no-footer{
+    width: 100%;
+}
+table.dataTable thead th, table.dataTable thead td{
+    padding: 0;
+    border-bottom: 1px solid #111111;
+    font-size: 8px;
+}
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 2px;
+    font-size: 8px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled{
+    font-size: 10px !important;
+    padding: 0 !important;
+}
+#dashboardTable_length label{
+    font-size: 11px !important;
+    margin: 0 !important;
+}
+#dropdown i{
+    font-size: 20px;
+}
+@media(min-width: 768px){
+    .dashboardMain{ 
+        width: 90%;
+        margin: 15px auto;
+    }
+    .dashboardMain h3{
+        font-size: 25px;
+        padding: 10px;
+    }
+    .jobTicketCont a{
+
+        padding: 10px;
+        font-size: 15px;
+        width: 40%;
+    }
+    .jobTicketCont{
+        margin: 15px auto;
+    }
+    .dashboardUserDiv{
+        padding: 5px;
+    }    
+    .dataTables_wrapper .dataTables_paginate{
+        font-size: 16px;
+        padding:5;
+    }
+    #dashboardTable_length label{
+        font-size: 14px;
+        margin: 5px auto;
+    }
+    #dropdown i{
+        font-size: 22px;
+    }
+}
+@media(min-width: 1024px){
+    .dashboardMain{ 
+        width: 90%;
+     margin: 20px auto;
+    }
+    .dashboardMain h3{
+        font-size: 30px;
+        padding: 10px;
+    }
+    .jobTicketCont a{
+
+        padding: 10px;
+        font-size: 15px;
+        width: 30%;
+    }
+    .jobTicketCont{
+        margin: 20px auto;
+    }
+    .dashboardUserDiv{
+        padding: 5px;
+    }    
+    .dataTables_wrapper{
+        width: auto !important;
+        font-size: auto !important;
+    }
+    table.dataTable.no-footer{
+        width: 100%;
+    }
+    table.dataTable thead th, table.dataTable thead td{
+        
+    padding: 10px 0;
+    font-size: 20px;
+    }
+    table.dataTable tbody th, table.dataTable tbody td {
+        
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .dataTables_wrapper .dataTables_paginate{
+        font-size: 18px ;
+        padding:5;
+    }
+    #dashboardTable_length label{
+        font-size: 16px;
+        margin: 5px auto;
+    }
+    #dropdown i{
+        font-size: 25px;
+    }
+}

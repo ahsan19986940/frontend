@@ -1,0 +1,53 @@
+<div class="dashboardMain">
+    <h3>Workers Job Tickets</h3>
+    <div class="jobTicket">
+        <div class="jobTicketCont">
+            <a (click)="insertJobTicketModal()">Insert New Job Ticket</a>
+        </div>
+        <div  class="dashboardUserDiv">
+
+            <table datatable *ngIf="length > 0" [dtOptions]="dtOptions" id="dashboardTable">
+                <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <td>Category</td>
+                        <th>Username</th>
+                        <th>createdOn</th>
+                        <th>status</th>
+                        <th>closedOn</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody *ngIf='response'>
+                    <tr *ngFor="let l of jobTicketList">
+                        <td (click)="viewJobTicketModal(l.id)">{{l.id}}</td>
+                        <td (click)="viewJobTicketModal(l.id)">{{l.category?.title}}</td>
+                        <td (click)="viewJobTicketModal(l.id)">{{l.user?.username}}</td>
+                        
+                        <td (click)="viewJobTicketModal(l.id)" *ngIf="l.createdOn !== 'none'">{{l.createdOn | date : 'dd-MM-yyyy'}} - {{l.createdOn | date : 'h:mm a'}}</td>
+                        <td (click)="viewJobTicketModal(l.id)" *ngIf="l.createdOn === 'none'">None</td>
+
+                        <td (click)="viewJobTicketModal(l.id)">{{l.status}}</td>
+                        <td (click)="viewJobTicketModal(l.id)" *ngIf="l.closedOn !== 'none'">{{l.closedOn | date : 'dd-MM-yyyy'}} - {{l.closedOn | date : 'h:mm a'}}</td>
+                        <td (click)="viewJobTicketModal(l.id)" *ngIf="l.closedOn === 'none'">None</td>
+                        <td>
+                            <div id="dropdown" *ngIf="l.closedOn === 'none'">
+                                <button class="dropbtn" href="">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div id="dropdown-content">
+                                    <div id="dropdown-cont">
+                                        <a (click)="closeJobTicketModal(l.id)">Close Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="noLedgerDiv" *ngIf="length <= 0">
+                <h2>No Job Ticket Found</h2>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div *ngIf="user">
+    <div class="mainDivHeading">
+        <div class="mainDivSubHead" style='width:100%;'>
+            <h3>Job Ticket Info</h3>
+        </div>
+        <button style="color: #fff;" type="button" class="close pull-right" aria-label="Close"
+            (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <section>
+        <div class="mainDiv">
+            <div class="viewUserImg">
+                <img src="http://127.0.0.1:3000/job/{{user.id}}" onerror="this.src='assets/thumbnail.png';">
+
+            </div>
+            <div class="viewUserData">
+                <div class="viewUserContent">
+
+                    <h4>Ticket ID</h4>
+                    <h4>Category</h4>
+                    <h4>Username</h4>
+                    <h4>CreatedOn</h4>
+                    <h4>Status</h4>
+                    <h4 id="locationDivWidth">Open Location</h4>
+                </div>
+                <div class="viewUserContent2">
+                    <h4>{{user.id}}</h4>
+                    <h4>{{user.category?.title}}</h4>
+                    <h4>{{user.user?.fullname}}</h4>
+                    <h4 *ngIf="user.createdOn !== 'none'">{{user.createdOn | date : 'dd-MM-yyyy'}} -
+                        {{user.createdOn | date : 'h:mm a'}}</h4>
+                    <h4 *ngIf="user.createdOn === 'none'">None</h4>
+                    <h4>{{user.status}}</h4>
+                    <h4>{{user.location}}</h4>
+
+                </div>
+            </div>
+            <div *ngIf="user.closedOn !== 'none'" class="mainDiv">
+                <div  class="viewUserImg">
+                    <img src="http://127.0.0.1:3000/closeJob/{{user.id}}" onerror="this.src='assets/thumbnail.png';">
+
+                </div>
+                <h3>Closed Job Ticket</h3>
+                <div class="viewUserData">
+                    <div class="viewUserContent">
+                        <h4>Closed On</h4>
+                        <h4   id="locationDivWidth">Close Location</h4>
+                    </div>
+                    <div class="viewUserContent2">
+                        <h4 *ngIf="user.closedOn !== 'none'">{{user.closedOn | date : 'dd-MM-yyyy'}} -
+                            {{user.closedOn | date : 'h:mm a'}}</h4>
+                        <h4 *ngIf="user.closedOn === 'none'">None</h4>
+
+                        <h4>{{user.locationClose}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

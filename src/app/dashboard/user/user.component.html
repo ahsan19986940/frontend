@@ -1,0 +1,40 @@
+<div class="dashboardMain">
+    <h3>Manage Users</h3>
+    <div class="jobTicket">
+        <div class="jobTicketCont">
+            <a (click)="insertJobTicketModal()">Insert New User</a>
+        </div>
+        <div class="dashboardUserDiv">
+
+            <table datatable *ngIf="length >0 " [dtOptions]="dtOptions" id="dashboardTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <td>Fullname</td>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        <th>Last Login</th>
+                        <th>Created On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of userlist; let i = index">
+                        <td (click)="viewUser(l.id)">{{i+1}}</td>
+                        <td (click)="viewUser(l.id)">{{l.fullname}}</td>
+                        <td (click)="viewUser(l.id)">{{l.username}}</td>
+                        <td (click)="viewUser(l.id)">{{l.password}}</td>
+                        <td (click)="viewUser(l.id)">{{l.role}}</td>
+                        <td (click)="viewUser(l.id)" *ngIf="l.lastLogin !== 'none'">{{l.lastLogin | date : 'dd-MM-yyyy'}} - {{l.lastLogin | date : 'h:mm a'}}</td>
+                        <td (click)="viewUser(l.id)" *ngIf="l.lastLogin === 'none'">None</td>
+                        <td (click)="viewUser(l.id)" *ngIf="l.createdOn !== 'none'">{{l.createdOn | date : 'dd-MM-yyyy'}} - {{l.createdOn | date : 'h:mm a'}}</td>
+                        <td (click)="viewUser(l.id)" *ngIf="l.createdOn === 'none'">None</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="length <= 0 " class="noLedgerDiv" >
+                <h2>No User Found</h2>
+            </div>
+        </div>
+    </div>
+</div>

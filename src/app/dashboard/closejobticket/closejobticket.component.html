@@ -1,0 +1,34 @@
+<div>
+    <div class="mainDivHeading">
+        <div class="mainDivSubHead" style='width:100%;'>
+            <h3>Close Job Ticket</h3>
+        </div>
+        <button style="color: #fff;" type="button" class="close pull-right" aria-label="Close"
+            (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <section>
+        <div class="mainDiv">
+            <form class="artistForm" #user="ngForm" (ngSubmit)="addJobTicket(user)" ngNativeValidate>
+                <div>
+                    <img *ngIf="imgURL == null" src="../../../assets/thumbnail.png">
+                    <img *ngIf="imgURL" src="{{imgURL}}" alt="productImage">
+
+                    <input id="removeSubmitBtn" *ngIf="imgURL" type="button" name="removeImage" (click)="removeImage()"
+                        value="Remove Image" />
+                    <input class="formInput" id="uploaded_file" *ngIf="imgURL == null" type="file"
+                        accept='image/png, image/jpeg, image/jpg' name="profileImg" (change)="onImagesUpload($event)"
+                        placeholder="Click to Upload Product Image" />
+                </div>
+                <div *ngIf='length'>
+                    <label>Status will be marked Completed</label>
+                </div>
+                <div>
+                    <input id="loginSubmitBtn" type="submit" name="submit" value="Submit">
+                </div>
+            </form>
+
+        </div>
+    </section>
+</div>

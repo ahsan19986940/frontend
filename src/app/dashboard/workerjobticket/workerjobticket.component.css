@@ -1,0 +1,49 @@
+.dashboardMain{    width: 90%;
+    margin: 20px auto;}
+.dashboardMain h3{
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 30px;
+    background-color: #b90103;
+    color: #fff;
+    padding: 10px;
+}
+.jobTicket{
+    background-color: #fff;
+    border: 1px solid #999;
+    border-top: none;
+    padding: 5px;
+}
+.jobTicketCont{
+    margin: 20px auto;
+}
+.jobTicketCont a{
+    padding: 10px;
+font-size: 15px;
+background-color: #2e2e2e;
+color: #fff;
+border: 1px solid #fff;
+font-weight: 600;
+width: 30%;
+display: block;
+text-align: center;margin: 0 auto;
+cursor: pointer;
+transition:0.5s all;
+}
+.jobTicketCont a:hover{
+    background: #fafafa;
+    color: #b90103;
+    border-color: #b90103;
+    border-radius: 5px;
+}
+
+.dashboardUserDiv{
+    padding: 5px;
+    text-align: center;
+}
+th{
+    font-weight: bolder;
+}
+td{ cursor:pointer;}

@@ -1,0 +1,152 @@
+header{
+    
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #b90103;
+}
+.mainLogo{
+    padding: 0;
+    background: url("../../assets/logo.png") top center no-repeat;
+    background-size: 100% 100%;
+    text-indent: -9999px;
+    margin: 0 auto;
+    height: 90px;
+    width: 200px;
+}
+
+.mainDiv h3{
+    margin: 0 auto;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ba0101;
+    text-align: center;
+    padding: 5px;
+
+}
+.signInForm{
+    margin: 5px auto;
+    text-align: center;
+    width: 90%;
+    
+} 
+.signInForm div{
+    display: grid;
+    width: 100%;
+    margin: 5px auto;
+}
+.signInForm label{
+    
+    font-size: 13px;
+    font-weight: 500;    
+    margin: 5px auto;
+}
+.signInForm input{    
+     font-size: 12px;
+padding: 5px;
+width: 65%;
+margin: 0 auto;
+border-radius: 5px;
+border: 1px solid #000;
+}
+.signInForm select{  
+    font-size: 12px;
+padding: 5px;
+width: 65%;
+margin: 0 auto;
+border-radius: 5px;
+border: 1px solid #000;
+}
+#loginSubmitBtn{
+    color: #fff;
+background-color: #ba0101;
+border: 1px solid #000;
+border-radius: 5px;
+transition: 0.5s all;
+cursor: pointer;
+margin: 10px auto;
+font-size: 15px;
+padding: 2px;
+width: 50%;
+}
+#loginSubmitBtn:hover{
+    border-color: #ba0101;
+    color: #ba0101;
+    background-color: #fafafa;
+}
+
+@media(min-width: 768px){
+    .mainDiv h3{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .signInForm{
+        margin: 10px auto;
+        width: 60%;
+    }
+    .signInForm div{
+        width: 70%;
+        margin: 5px auto;
+    }
+    
+    .signInForm label{
+        font-size: 16px;
+    }
+    .signInForm input{
+        padding: 10px;
+        width: 70%; 
+        font-size: 14px; 
+    }
+    .signInForm select{
+        padding: 10px;
+        width: 70%; 
+        font-size: 14px;
+        margin: 8px auto; 
+    }
+    #loginSubmitBtn{
+    font-size: 15px;
+    padding: 5px;
+    border-width: 2px;
+    margin: 20px auto;
+    width: 40%;
+    }
+}
+@media(min-width: 1024px){
+    .mainDiv h3{
+        font-size: 26px;
+        padding: 15px;
+    }
+    .signInForm{
+        margin: 10px auto;
+        width: 50%;
+    }
+    .signInForm div{
+        width: 70%;
+        margin: 10px auto;
+    }
+    
+    .signInForm label{
+    
+        font-size: 20px;
+    }
+    .signInForm input{
+        padding: 10px;
+        width: 70%;
+        font-size: 16px;
+    }
+    .signInForm select{
+        padding: 10px;
+        width: 70%;
+        margin: 10px auto;
+        font-size: 16px;
+    }
+    #loginSubmitBtn{
+        font-size: 18px;
+        padding: 5px;
+        border-width: 2px;
+        margin: 30px auto;
+        width: 35%;
+    }
+}

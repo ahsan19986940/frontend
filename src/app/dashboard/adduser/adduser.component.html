@@ -1,0 +1,41 @@
+<div>
+    <div class="mainDivHeading">
+        <div class="mainDivSubHead" style='width:100%;'>
+            <h3>Insert New User</h3>
+        </div>
+        <button style="color: #fff;" type="button" class="close pull-right" aria-label="Close"
+            (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <section>
+        <div class="mainDiv">
+            <form class="artistForm" #user="ngForm" (ngSubmit)="addUser(user)" ngNativeValidate>
+                <div>
+                    <label>Fullname</label>
+                    <input type="text" name="fullname" ngModel required />
+                </div>
+                <div>
+                    <label>Username</label>
+                    <input type="text" name="username" ngModel required />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="text" name="password" ngModel required />
+                </div>
+                <div>
+                    <label>Role</label>
+                    <select name="role" ngModel required>
+                        <option class="placeholder" selected disabled value="">Select Role</option>
+                        <option value="Worker">Worker</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </div>
+                <div>
+                    <input id="loginSubmitBtn" type="submit" name="submit" value="Submit">
+                </div>
+            </form>
+
+        </div>
+    </section>
+</div>
